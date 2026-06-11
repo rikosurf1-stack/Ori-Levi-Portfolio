@@ -7,18 +7,16 @@ backend:
   name: git-gateway
   branch: main
 
-# Where uploaded photos are stored, and the public URL they resolve to.
 media_folder: "public/images/uploads"
 public_folder: "/images/uploads"
 
-# A nicer editing flow: Draft → Review → Publish.
 publish_mode: editorial_workflow
 
 collections:
   - name: "projects"
     label: "Projects"
     label_singular: "Project"
-    description: "Add or edit a portfolio project."
+    description: "Add or edit a portfolio project. Fill both English and Hebrew."
     folder: "content/projects"
     create: true
     slug: "{{slug}}"
@@ -27,7 +25,14 @@ collections:
     summary: "{{title}} — {{category}} ({{year}})"
     sortable_fields: ["order", "year", "title"]
     fields:
-      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Title (English)", name: "title", widget: "string" }
+      - {
+          label: "Title (Hebrew)",
+          name: "title_he",
+          widget: "string",
+          required: false,
+          hint: "Leave blank to reuse the English title (good for brand names).",
+        }
       - label: "Category"
         name: "category"
         widget: "select"
@@ -41,17 +46,24 @@ collections:
           - "Retreats"
       - { label: "Year", name: "year", widget: "string" }
       - {
-          label: "Location",
+          label: "Location (English)",
           name: "location",
           widget: "string",
           required: false,
           hint: "e.g. Tulum, Mexico",
         }
       - {
+          label: "Location (Hebrew)",
+          name: "location_he",
+          widget: "string",
+          required: false,
+          hint: "e.g. טולום, מקסיקו",
+        }
+      - {
           label: "Cover image",
           name: "cover",
           widget: "image",
-          hint: "Shown on the Work page. Portrait images look best.",
+          hint: "Shown on the work pages. Portrait images look best.",
         }
       - {
           label: "Feature this project",
@@ -69,10 +81,15 @@ collections:
           hint: "Lower numbers appear first (1, 2, 3 …).",
         }
       - {
-          label: "Description",
+          label: "Description (English)",
           name: "description",
           widget: "text",
-          hint: "A short, confident paragraph about the project.",
+        }
+      - {
+          label: "Description (Hebrew)",
+          name: "description_he",
+          widget: "text",
+          required: false,
         }
       - label: "Gallery images"
         name: "images"
@@ -98,10 +115,17 @@ collections:
         format: "yaml-frontmatter"
         fields:
           - { label: "Name", name: "name", widget: "string" }
-          - { label: "Tagline", name: "tagline", widget: "string" }
-          - label: "Hero images (rotate fullscreen)"
+          - { label: "Tagline (English)", name: "tagline", widget: "string" }
+          - {
+              label: "Tagline (Hebrew)",
+              name: "tagline_he",
+              widget: "string",
+              required: false,
+            }
+          - label: "Hero images (saved for future use)"
             name: "heroImages"
             widget: "list"
+            required: false
             label_singular: "Image"
             fields:
               - { label: "Image", name: "src", widget: "image" }
@@ -112,12 +136,25 @@ collections:
         format: "yaml-frontmatter"
         fields:
           - { label: "Portrait", name: "portrait", widget: "image" }
-          - { label: "Headline", name: "headline", widget: "string" }
+          - { label: "Headline (English)", name: "headline", widget: "string" }
           - {
-              label: "Body",
+              label: "Headline (Hebrew)",
+              name: "headline_he",
+              widget: "string",
+              required: false,
+            }
+          - {
+              label: "Body (English)",
               name: "body",
-              widget: "markdown",
-              hint: "Write a few short paragraphs.",
+              widget: "text",
+              hint: "Separate paragraphs with a blank line.",
+            }
+          - {
+              label: "Body (Hebrew)",
+              name: "body_he",
+              widget: "text",
+              required: false,
+              hint: "Separate paragraphs with a blank line.",
             }
 
       - label: "Contact"
@@ -129,7 +166,7 @@ collections:
               label: "WhatsApp number",
               name: "whatsapp",
               widget: "string",
-              hint: "International format, digits only. e.g. 972500000000",
+              hint: "International format, digits only. e.g. 972509942030",
             }
           - {
               label: "Instagram handle",
@@ -137,5 +174,4 @@ collections:
               widget: "string",
               hint: "Without the @. e.g. orilevi._",
             }
-          - { label: "Email", name: "email", widget: "string" }
           - { label: "Background image", name: "background", widget: "image" }

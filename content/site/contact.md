@@ -1,6 +1,5 @@
 ---
-whatsapp: "972500000000"
+whatsapp: "972509942030"
 instagram: "orilevi._"
-email: "studio@orilevi.com"
 background: "https://picsum.photos/seed/ori-contact/2400/1600"
 ---

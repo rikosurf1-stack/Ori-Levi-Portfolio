@@ -6,7 +6,9 @@
       "Bash(npm run *)",
       "Bash(git init *)",
       "Bash(git add *)",
-      "Bash(git commit -q -m ' *)"
+      "Bash(git commit -q -m ' *)",
+      "Bash(rm -f src/app/layout.tsx src/app/page.tsx src/app/not-found.tsx src/app/about/page.tsx src/app/contact/page.tsx src/app/work/page.tsx \"src/app/work/[slug]/page.tsx\" src/components/Hero.tsx)",
+      "Bash(rmdir src/app/about src/app/contact \"src/app/work/[slug]\" src/app/work)"
     ]
   }
 }

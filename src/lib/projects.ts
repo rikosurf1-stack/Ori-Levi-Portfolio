@@ -2,6 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import matter from "gray-matter";
 import type { GalleryImage, Project } from "./types";
+import { CATEGORIES } from "./i18n";
 
 const projectsDir = path.join(process.cwd(), "content/projects");
 
@@ -28,10 +29,13 @@ function parseProject(file: string): Project {
   return {
     slug,
     title: data.title ?? slug,
+    titleHe: data.title_he || undefined,
     category: data.category ?? "",
     year: String(data.year ?? ""),
     location: data.location || undefined,
+    locationHe: data.location_he || undefined,
     description: data.description ?? "",
+    descriptionHe: data.description_he || undefined,
     cover: data.cover ?? "",
     coverAlt: data.coverAlt || data.title,
     featured: Boolean(data.featured),
@@ -57,11 +61,23 @@ export function getProject(slug: string): Project | undefined {
   return getAllProjects().find((p) => p.slug === slug);
 }
 
-/** Returns the project that follows the given slug (wraps around). */
+export function getProjectsByCategoryKey(key: string): Project[] {
+  return getAllProjects().filter((p) => p.category === key);
+}
+
+/** The next project within the same category (wraps), else the global next. */
 export function getNextProject(slug: string): Project | undefined {
-  const all = getAllProjects();
-  if (all.length < 2) return undefined;
-  const index = all.findIndex((p) => p.slug === slug);
-  if (index === -1) return undefined;
-  return all[(index + 1) % all.length];
+  const current = getProject(slug);
+  if (!current) return undefined;
+  const pool = getProjectsByCategoryKey(current.category);
+  const list = pool.length > 1 ? pool : getAllProjects();
+  if (list.length < 2) return undefined;
+  const index = list.findIndex((p) => p.slug === slug);
+  return list[(index + 1) % list.length];
+}
+
+/** Categories that actually have at least one project, in canonical order. */
+export function getActiveCategories() {
+  const present = new Set(getAllProjects().map((p) => p.category));
+  return CATEGORIES.filter((c) => present.has(c.key));
 }

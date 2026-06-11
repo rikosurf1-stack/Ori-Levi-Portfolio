@@ -13,11 +13,38 @@
   body {
     background-color: theme("colors.paper");
     color: theme("colors.ink");
+    /* A soft organic warmth — barely-there light pooling in the centre. */
+    background-image: radial-gradient(
+      120% 90% at 50% 8%,
+      rgba(255, 252, 244, 0.55) 0%,
+      rgba(233, 227, 215, 0) 55%
+    );
+    background-attachment: fixed;
   }
 
   ::selection {
     background-color: theme("colors.ink");
     color: theme("colors.paper");
+  }
+}
+
+/* Nostalgic film grain — a single fixed layer over the whole page.
+   Subtle on purpose: it warms everything without looking like "fake film". */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  pointer-events: none;
+  opacity: 0.05;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.82' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 180px 180px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
 }
 
@@ -33,14 +60,13 @@
   }
   .link-underline::after {
     content: "";
-    @apply absolute left-0 -bottom-0.5 h-px w-full origin-right scale-x-0 bg-current transition-transform duration-500 ease-editorial;
+    @apply absolute bottom-0 left-0 h-px w-full origin-right scale-x-0 bg-current transition-transform duration-500 ease-editorial;
   }
   .link-underline:hover::after {
     @apply origin-left scale-x-100;
   }
 }
 
-/* Hide scrollbar chrome on the hero where it would otherwise flash. */
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }

@@ -3,19 +3,14 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import { isLocale, LOCALES, t, type Locale } from "@/lib/i18n";
 
-const NAV = [
-  { href: "/work", label: "Work" },
-  { href: "/about", label: "About" },
-  { href: "/contact", label: "Contact" },
-];
-
-export default function Header() {
+export default function Header({ locale }: { locale: Locale }) {
   const pathname = usePathname();
-  const isHome = pathname === "/";
   const [open, setOpen] = useState(false);
+  const tr = t(locale);
 
-  // Lock body scroll while the mobile menu is open.
+  // Lock scroll while the mobile menu is open.
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
     return () => {
@@ -23,26 +18,31 @@ export default function Header() {
     };
   }, [open]);
 
-  // Close the menu whenever the route changes.
+  // Close the menu on navigation.
   useEffect(() => {
     setOpen(false);
   }, [pathname]);
 
-  // On the home page the header floats in white over the hero.
-  const overHero = isHome && !open;
-  const tone = overHero ? "text-paper" : "text-ink";
+  const other: Locale = locale === "en" ? "he" : "en";
+  const switchPath = (() => {
+    const seg = pathname.split("/");
+    if (seg[1] && isLocale(seg[1])) {
+      seg[1] = other;
+      return seg.join("/") || `/${other}`;
+    }
+    return `/${other}`;
+  })();
+
+  const nav = [
+    { href: `/${locale}/about`, label: tr.nav.about },
+    { href: `/${locale}/contact`, label: tr.nav.contact },
+  ];
 
   return (
-    <header
-      className={`fixed inset-x-0 top-0 z-50 ${
-        isHome ? "" : "bg-paper/85 backdrop-blur-sm"
-      }`}
-    >
-      <div
-        className={`mx-auto flex max-w-page items-center justify-between px-6 py-6 md:px-10 md:py-7 ${tone} transition-colors duration-500`}
-      >
+    <header className="fixed inset-x-0 top-0 z-50 bg-paper/70 backdrop-blur-md">
+      <div className="mx-auto flex max-w-page items-center justify-between px-6 py-5 text-ink md:px-10 md:py-6">
         <Link
-          href="/"
+          href={`/${locale}`}
           className="font-sans text-sm font-medium uppercase tracking-wordmark"
           aria-label="Ori Levi — home"
         >
@@ -50,33 +50,49 @@ export default function Header() {
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden items-center gap-10 md:flex">
-          {NAV.map((item) => {
-            const active = pathname.startsWith(item.href);
-            return (
-              <Link
-                key={item.href}
-                href={item.href}
-                className={`label link-underline ${
-                  active ? "opacity-100" : "opacity-80 hover:opacity-100"
-                } transition-opacity`}
-              >
-                {item.label}
-              </Link>
-            );
-          })}
+        <nav className="hidden items-center gap-9 md:flex">
+          {nav.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className={`label link-underline ${
+                pathname.startsWith(item.href)
+                  ? "opacity-100"
+                  : "opacity-80 hover:opacity-100"
+              } transition-opacity`}
+            >
+              {item.label}
+            </Link>
+          ))}
+          <Link
+            href={switchPath}
+            className="label text-muted transition-opacity hover:text-ink"
+            lang={other}
+          >
+            {tr.language.label}
+          </Link>
         </nav>
 
-        {/* Mobile toggle */}
-        <button
-          type="button"
-          onClick={() => setOpen((v) => !v)}
-          className="label md:hidden"
-          aria-expanded={open}
-          aria-label="Toggle menu"
-        >
-          {open ? "Close" : "Menu"}
-        </button>
+        {/* Mobile controls */}
+        <div className="flex items-center gap-5 md:hidden">
+          <Link
+            href={switchPath}
+            className="label text-muted"
+            lang={other}
+            onClick={() => setOpen(false)}
+          >
+            {tr.language.label}
+          </Link>
+          <button
+            type="button"
+            onClick={() => setOpen((v) => !v)}
+            className="label"
+            aria-expanded={open}
+            aria-label="Toggle menu"
+          >
+            {open ? "×" : "—"}
+          </button>
+        </div>
       </div>
 
       {/* Mobile overlay menu */}
@@ -87,7 +103,7 @@ export default function Header() {
             : "pointer-events-none opacity-0"
         }`}
       >
-        {NAV.map((item) => (
+        {nav.map((item) => (
           <Link
             key={item.href}
             href={item.href}

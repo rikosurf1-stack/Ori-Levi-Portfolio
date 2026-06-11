@@ -5,11 +5,14 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // A warm gallery palette — paper white and soft ink, never pure black/white.
-        ink: "#161410",
-        paper: "#F6F4EF",
-        muted: "#8C887C",
-        line: "#E3DFD5",
+        // Organic, warm gallery palette — never pure black or white.
+        // "paper" is a soft bone shade; "char" is a warm near-black for dark frames.
+        ink: "#211D16",
+        paper: "#E9E3D7",
+        sand: "#E1DACB",
+        muted: "#8A8174",
+        line: "#D3CABA",
+        char: "#16130E",
       },
       fontFamily: {
         sans: ["var(--font-sans)", "system-ui", "sans-serif"],

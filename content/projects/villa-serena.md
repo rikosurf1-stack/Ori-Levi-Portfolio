@@ -1,8 +1,10 @@
 ---
 title: "Villa Serena"
+title_he: "Villa Serena"
 category: "Hospitality"
 year: "2024"
 location: "Ibiza, Spain"
+location_he: "איביזה, ספרד"
 cover: "https://picsum.photos/seed/serena-cover/1900/2375"
 featured: false
 order: 5
@@ -10,6 +12,10 @@ description: >
   A private villa entering the rental market needed a library that sold the
   experience, not just the rooms. We photographed the house across a single day —
   from first light on the terrace to dinner under the olive trees.
+description_he: >
+  וילה פרטית שנכנסה לשוק ההשכרה נזקקה לספרייה חזותית שמוכרת את החוויה, ולא רק את
+  החדרים. צילמנו את הבית לאורך יום אחד — מהאור הראשון על המרפסת ועד ארוחת הערב תחת
+  עצי הזית.
 images:
   - src: "https://picsum.photos/seed/serena-1/2200/1400"
     alt: "Villa exterior with pool at midday"

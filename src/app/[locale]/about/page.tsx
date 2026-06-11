@@ -1,29 +1,40 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { notFound } from "next/navigation";
 import MotionReveal from "@/components/MotionReveal";
 import SmoothImage from "@/components/SmoothImage";
 import { getAbout } from "@/lib/site";
+import { getActiveCategories } from "@/lib/projects";
+import { isLocale, pick, t, type Locale } from "@/lib/i18n";
 
-export const metadata: Metadata = {
-  title: "About — Ori Levi",
-  description:
-    "Ori Levi is a commercial lifestyle photographer creating visual stories for hospitality, wellness and lifestyle brands.",
-};
+export function generateMetadata({
+  params,
+}: {
+  params: { locale: string };
+}): Metadata {
+  const locale = isLocale(params.locale) ? params.locale : "en";
+  return {
+    title: locale === "he" ? "אודות — Ori Levi" : "About — Ori Levi",
+  };
+}
 
-const DISCIPLINES = [
-  "Hospitality",
-  "Wellness",
-  "Food & Beverage",
-  "Fashion",
-  "Lifestyle",
-  "Events",
-];
-
-export default function AboutPage() {
+export default function AboutPage({
+  params,
+}: {
+  params: { locale: string };
+}) {
+  if (!isLocale(params.locale)) notFound();
+  const locale = params.locale as Locale;
   const about = getAbout();
+  const tr = t(locale);
+  const paragraphs =
+    locale === "he" && about.paragraphsHe.length > 0
+      ? about.paragraphsHe
+      : about.paragraphs;
+  const disciplines = getActiveCategories();
 
   return (
-    <div className="px-6 pb-24 pt-32 md:px-10 md:pb-36 md:pt-44">
+    <div className="px-6 pb-24 pt-32 md:px-10 md:pb-40 md:pt-44">
       <div className="mx-auto max-w-page">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-12 md:gap-16">
           {/* Portrait */}
@@ -31,7 +42,7 @@ export default function AboutPage() {
             <MotionReveal>
               <SmoothImage
                 src={about.portrait}
-                alt="Portrait of Ori Levi"
+                alt="Ori Levi"
                 aspectClassName="aspect-[4/5]"
                 sizes="(max-width: 768px) 100vw, 40vw"
                 priority
@@ -40,17 +51,17 @@ export default function AboutPage() {
           </div>
 
           {/* Copy */}
-          <div className="md:col-span-7 md:pl-8">
+          <div className="md:col-span-7 md:ps-8">
             <MotionReveal>
-              <p className="label text-muted">About</p>
+              <p className="label text-muted">{tr.about.eyebrow}</p>
               <h1 className="mt-5 max-w-2xl font-serif text-3xl font-extralight leading-[1.25] md:text-5xl md:leading-[1.2]">
-                {about.headline}
+                {pick(locale, about.headline, about.headlineHe)}
               </h1>
             </MotionReveal>
 
             <MotionReveal delay={0.1}>
               <div className="mt-10 max-w-xl space-y-6 font-sans text-base leading-relaxed text-ink/75 md:mt-12">
-                {about.paragraphs.map((p, i) => (
+                {paragraphs.map((p, i) => (
                   <p key={i}>{p}</p>
                 ))}
               </div>
@@ -58,11 +69,11 @@ export default function AboutPage() {
 
             <MotionReveal delay={0.15}>
               <div className="mt-12 border-t border-line pt-8">
-                <p className="label text-muted">Working across</p>
+                <p className="label text-muted">{tr.about.workingAcross}</p>
                 <ul className="mt-5 flex flex-wrap gap-x-6 gap-y-3">
-                  {DISCIPLINES.map((d) => (
-                    <li key={d} className="font-serif text-lg font-light">
-                      {d}
+                  {disciplines.map((d) => (
+                    <li key={d.slug} className="font-serif text-lg font-light">
+                      {locale === "he" ? d.he : d.en}
                     </li>
                   ))}
                 </ul>
@@ -72,10 +83,10 @@ export default function AboutPage() {
             <MotionReveal delay={0.2}>
               <div className="mt-12">
                 <Link
-                  href="/contact"
+                  href={`/${locale}/contact`}
                   className="label link-underline text-ink"
                 >
-                  Start a Project
+                  {tr.about.cta}
                 </Link>
               </div>
             </MotionReveal>
