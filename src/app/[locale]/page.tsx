@@ -25,9 +25,7 @@ export default function HomePage({ params }: { params: { locale: string } }) {
 
   return (
     <section className="relative flex min-h-[100svh] flex-col items-center justify-center px-6 py-28 md:py-32">
-      <HomeCarousel slides={slides} />
-
-      <nav className="mt-12 flex max-w-2xl flex-wrap items-center justify-center gap-x-6 gap-y-2 md:mt-16">
+      <nav className="mb-12 flex max-w-2xl flex-wrap items-center justify-center gap-x-6 gap-y-2 md:mb-16">
         {categories.map((c) => (
           <Link
             key={c.slug}
@@ -38,6 +36,8 @@ export default function HomePage({ params }: { params: { locale: string } }) {
           </Link>
         ))}
       </nav>
+
+      <HomeCarousel slides={slides} />
     </section>
   );
 }

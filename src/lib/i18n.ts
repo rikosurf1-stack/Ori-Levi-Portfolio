@@ -22,13 +22,13 @@ export function pick(locale: Locale, en: string, he?: string): string {
  * on the home screen.
  */
 export const CATEGORIES = [
-  { slug: "hospitality", key: "Hospitality", en: "Hospitality", he: "אירוח" },
-  { slug: "wellness", key: "Wellness", en: "Wellness", he: "וולנס" },
+  { slug: "hospitality", key: "Hospitality", en: "Hospitality", he: "מלונות" },
+  { slug: "wellness", key: "Wellness", en: "Wellness", he: "אורח חיים" },
   {
     slug: "food-beverage",
     key: "Food & Beverage",
     en: "Food & Beverage",
-    he: "אוכל ומשקאות",
+    he: "מסעדות",
   },
   { slug: "fashion", key: "Fashion", en: "Fashion", he: "אופנה" },
   { slug: "lifestyle", key: "Lifestyle", en: "Lifestyle", he: "לייפסטייל" },
@@ -135,7 +135,7 @@ const DICTIONARIES: Record<Locale, Dict> = {
     contact: {
       eyebrow: "יצירת קשר",
       headline: "בואו ניצור משהו ששווה לזכור.",
-      sub: "זמין לעבודות ברחבי העולם — אירוח, וולנס, אוכל ומשקאות, אופנה ולייפסטייל.",
+      sub: "זמין לעבודות ברחבי העולם — מלונות, אורח חיים, מסעדות, אופנה ואירועים.",
       whatsapp: "וואטסאפ",
       instagram: "אינסטגרם",
     },
