@@ -70,16 +70,6 @@ export default function ContactPage({
           </a>
         </div>
 
-        <div className="mt-10 flex justify-center text-paper/75">
-          <a
-            href={instagramHref}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="link-underline font-sans text-sm"
-          >
-            @{contact.instagram}
-          </a>
-        </div>
       </div>
     </section>
   );
