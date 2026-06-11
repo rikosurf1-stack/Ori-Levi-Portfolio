@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    background-color: theme("colors.paper");
+    color: theme("colors.ink");
+  }
+
+  ::selection {
+    background-color: theme("colors.ink");
+    color: theme("colors.paper");
+  }
+}
+
+@layer components {
+  /* Small tracked-out uppercase label used for nav, categories, meta. */
+  .label {
+    @apply font-sans text-[11px] uppercase tracking-label;
+  }
+
+  /* Subtle underline-on-hover link, drawn from the baseline. */
+  .link-underline {
+    @apply relative inline-block;
+  }
+  .link-underline::after {
+    content: "";
+    @apply absolute left-0 -bottom-0.5 h-px w-full origin-right scale-x-0 bg-current transition-transform duration-500 ease-editorial;
+  }
+  .link-underline:hover::after {
+    @apply origin-left scale-x-100;
+  }
+}
+
+/* Hide scrollbar chrome on the hero where it would otherwise flash. */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

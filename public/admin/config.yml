@@ -1,0 +1,141 @@
+# Decap CMS configuration — the visual editor at /admin
+#
+# `git-gateway` lets you log in and publish without touching code. It works
+# out-of-the-box on Netlify (Identity + Git Gateway). For other hosts, see GUIDE.md.
+
+backend:
+  name: git-gateway
+  branch: main
+
+# Where uploaded photos are stored, and the public URL they resolve to.
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
+
+# A nicer editing flow: Draft → Review → Publish.
+publish_mode: editorial_workflow
+
+collections:
+  - name: "projects"
+    label: "Projects"
+    label_singular: "Project"
+    description: "Add or edit a portfolio project."
+    folder: "content/projects"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    format: "yaml-frontmatter"
+    summary: "{{title}} — {{category}} ({{year}})"
+    sortable_fields: ["order", "year", "title"]
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - label: "Category"
+        name: "category"
+        widget: "select"
+        options:
+          - "Hospitality"
+          - "Wellness"
+          - "Food & Beverage"
+          - "Fashion"
+          - "Lifestyle"
+          - "Events"
+          - "Retreats"
+      - { label: "Year", name: "year", widget: "string" }
+      - {
+          label: "Location",
+          name: "location",
+          widget: "string",
+          required: false,
+          hint: "e.g. Tulum, Mexico",
+        }
+      - {
+          label: "Cover image",
+          name: "cover",
+          widget: "image",
+          hint: "Shown on the Work page. Portrait images look best.",
+        }
+      - {
+          label: "Feature this project",
+          name: "featured",
+          widget: "boolean",
+          default: false,
+          required: false,
+        }
+      - {
+          label: "Order",
+          name: "order",
+          widget: "number",
+          value_type: "int",
+          required: false,
+          hint: "Lower numbers appear first (1, 2, 3 …).",
+        }
+      - {
+          label: "Description",
+          name: "description",
+          widget: "text",
+          hint: "A short, confident paragraph about the project.",
+        }
+      - label: "Gallery images"
+        name: "images"
+        widget: "list"
+        label_singular: "Image"
+        summary: "{{fields.alt}}"
+        fields:
+          - { label: "Image", name: "src", widget: "image" }
+          - {
+              label: "Alt text",
+              name: "alt",
+              widget: "string",
+              required: false,
+              hint: "Brief description of the photo (for accessibility).",
+            }
+
+  - name: "pages"
+    label: "Pages"
+    files:
+      - label: "Home / Hero"
+        name: "home"
+        file: "content/site/home.md"
+        format: "yaml-frontmatter"
+        fields:
+          - { label: "Name", name: "name", widget: "string" }
+          - { label: "Tagline", name: "tagline", widget: "string" }
+          - label: "Hero images (rotate fullscreen)"
+            name: "heroImages"
+            widget: "list"
+            label_singular: "Image"
+            fields:
+              - { label: "Image", name: "src", widget: "image" }
+
+      - label: "About"
+        name: "about"
+        file: "content/site/about.md"
+        format: "yaml-frontmatter"
+        fields:
+          - { label: "Portrait", name: "portrait", widget: "image" }
+          - { label: "Headline", name: "headline", widget: "string" }
+          - {
+              label: "Body",
+              name: "body",
+              widget: "markdown",
+              hint: "Write a few short paragraphs.",
+            }
+
+      - label: "Contact"
+        name: "contact"
+        file: "content/site/contact.md"
+        format: "yaml-frontmatter"
+        fields:
+          - {
+              label: "WhatsApp number",
+              name: "whatsapp",
+              widget: "string",
+              hint: "International format, digits only. e.g. 972500000000",
+            }
+          - {
+              label: "Instagram handle",
+              name: "instagram",
+              widget: "string",
+              hint: "Without the @. e.g. orilevi._",
+            }
+          - { label: "Email", name: "email", widget: "string" }
+          - { label: "Background image", name: "background", widget: "image" }
