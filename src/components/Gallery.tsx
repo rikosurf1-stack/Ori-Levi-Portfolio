@@ -45,7 +45,7 @@ export default function Gallery({ images }: { images: GalleryImage[] }) {
               <SmoothImage
                 src={img.src}
                 alt={img.alt ?? ""}
-                aspectClassName="aspect-[3/2]"
+                natural
                 sizes="(max-width: 1024px) 100vw, 1100px"
                 className="mx-auto max-w-4xl"
               />
@@ -63,7 +63,7 @@ export default function Gallery({ images }: { images: GalleryImage[] }) {
                 <SmoothImage
                   src={img.src}
                   alt={img.alt ?? ""}
-                  aspectClassName="aspect-[4/5]"
+                  natural
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </MotionReveal>

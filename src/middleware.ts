@@ -4,11 +4,7 @@ import { DEFAULT_LOCALE, LOCALES } from "@/lib/i18n";
 // Paths that should never be locale-prefixed.
 const IGNORE = ["/admin", "/images", "/_next", "/favicon", "/api"];
 
-function detectLocale(request: NextRequest): string {
-  const header = request.headers.get("accept-language") || "";
-  // First language tag wins; Hebrew browsers land on Hebrew.
-  const first = header.split(",")[0]?.trim().toLowerCase() ?? "";
-  if (first.startsWith("he") || first.startsWith("iw")) return "he";
+function detectLocale(_request: NextRequest): string {
   return DEFAULT_LOCALE;
 }
 

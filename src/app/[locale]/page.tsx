@@ -32,8 +32,11 @@ export default function HomePage({ params }: { params: { locale: string } }) {
   return (
     <section className="relative flex min-h-[100svh] flex-col items-center justify-center px-6 py-28 md:py-32">
       {/* Tagline — first thing visible */}
-      <p className="mb-10 text-center font-serif text-2xl font-light leading-snug text-ink md:mb-12 md:text-3xl">
+      <p className="mb-4 max-w-xl text-center font-serif text-2xl font-light leading-snug text-ink md:text-3xl">
         {tagline}
+      </p>
+      <p className="mb-10 label text-muted md:mb-12">
+        Commercial lifestyle &amp; interior photography
       </p>
 
       {/* Category nav — single row on desktop */}

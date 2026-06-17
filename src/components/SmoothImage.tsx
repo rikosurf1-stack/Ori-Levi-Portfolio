@@ -6,7 +6,9 @@ import { useState } from "react";
 type Props = {
   src: string;
   alt: string;
-  /** Tailwind aspect-ratio class, e.g. "aspect-[4/5]". */
+  /** When true, the image renders at its natural aspect ratio — no crop. */
+  natural?: boolean;
+  /** Tailwind aspect-ratio class, e.g. "aspect-[4/5]". Used only when natural=false. */
   aspectClassName?: string;
   sizes?: string;
   priority?: boolean;
@@ -14,13 +16,10 @@ type Props = {
   className?: string;
 };
 
-/**
- * A next/image wrapper that fades and settles the image as it loads,
- * over a soft placeholder tone. Keeps the gallery feeling calm.
- */
 export default function SmoothImage({
   src,
   alt,
+  natural = false,
   aspectClassName = "aspect-[4/5]",
   sizes = "(max-width: 768px) 100vw, 50vw",
   priority = false,
@@ -28,6 +27,27 @@ export default function SmoothImage({
   className = "",
 }: Props) {
   const [loaded, setLoaded] = useState(false);
+
+  if (natural) {
+    return (
+      <div className={`overflow-hidden bg-line/30 ${className}`}>
+        <Image
+          src={src}
+          alt={alt}
+          width={0}
+          height={0}
+          sizes={sizes}
+          priority={priority}
+          quality={quality}
+          onLoad={() => setLoaded(true)}
+          style={{ width: "100%", height: "auto", display: "block" }}
+          className={`transition-opacity duration-[1400ms] ease-editorial ${
+            loaded ? "opacity-100" : "opacity-0"
+          }`}
+        />
+      </div>
+    );
+  }
 
   return (
     <div
