@@ -15,25 +15,30 @@ export type Slide = {
 
 const INTERVAL = 4200;
 
-/**
- * A Yotam-Shwartz-style home slideshow: a single moderately-sized frame, centred
- * in lots of white space, with a small caption. Gentle cross-fade only — no zoom,
- * no movement. The frame links into the project.
- */
+function shuffle<T>(arr: T[]): T[] {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
 export default function HomeCarousel({ slides }: { slides: Slide[] }) {
+  const [shuffled] = useState(() => shuffle(slides));
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
-    if (slides.length < 2) return;
+    if (shuffled.length < 2) return;
     const timer = setInterval(
-      () => setIndex((i) => (i + 1) % slides.length),
+      () => setIndex((i) => (i + 1) % shuffled.length),
       INTERVAL,
     );
     return () => clearInterval(timer);
-  }, [slides.length]);
+  }, [shuffled.length]);
 
-  if (slides.length === 0) return null;
-  const slide = slides[index];
+  if (shuffled.length === 0) return null;
+  const slide = shuffled[index];
 
   return (
     <div className="flex flex-col items-center">
@@ -87,9 +92,9 @@ export default function HomeCarousel({ slides }: { slides: Slide[] }) {
       </div>
 
       {/* Indicators */}
-      {slides.length > 1 && (
+      {shuffled.length > 1 && (
         <div className="mt-5 flex items-center gap-2">
-          {slides.map((_, k) => (
+          {shuffled.map((_, k) => (
             <button
               key={k}
               type="button"

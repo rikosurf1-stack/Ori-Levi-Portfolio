@@ -7,8 +7,8 @@ const config: Config = {
       colors: {
         // Organic, warm gallery palette — never pure black or white.
         // "paper" is a soft bone shade; "char" is a warm near-black for dark frames.
-        ink: "#211D16",
-        paper: "#E9E3D7",
+        ink: "#282623",
+        paper: "#FCFBF9",
         sand: "#E1DACB",
         muted: "#8A8174",
         line: "#D3CABA",
