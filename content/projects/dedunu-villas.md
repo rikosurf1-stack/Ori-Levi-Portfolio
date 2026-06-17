@@ -6,10 +6,10 @@ year: "2025"
 location: "Ahangama, Sri Lanka"
 location_he: "אהנגמה, סרי לנקה"
 cover: /images/uploads/dedunu-villas-cover.jpg
-featured: false
+featured: true
 order: 15
 description: "An Airbnb shoot for a new villa."
-description_he: "צילומי Airbnb לוילה חדשה."
+description_he: "צילומים ל-Airbnb של וילה חדשה."
 images:
   - src: /images/uploads/dedunu-villas-01.jpg
   - src: /images/uploads/dedunu-villas-02.jpg

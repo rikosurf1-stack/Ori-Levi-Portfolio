@@ -9,7 +9,7 @@ cover: /images/uploads/frederick-villa-cover.jpg
 featured: false
 order: 18
 description: "An Airbnb shoot for a new villa."
-description_he: "צילומי Airbnb לוילה חדשה."
+description_he: "צילומים ל-Airbnb של וילה חדשה."
 images:
   - src: /images/uploads/frederick-villa-01.jpg
   - src: /images/uploads/frederick-villa-02.jpg

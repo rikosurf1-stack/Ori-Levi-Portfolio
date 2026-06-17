@@ -9,7 +9,7 @@ cover: /images/uploads/anti-pro-surf-competition-cover.jpg
 featured: false
 order: 7
 description: "Shooting the surf competition in Tel Aviv."
-description_he: "צילום תחרות הגלישה בתל אביב."
+description_he: "צילום מתחרות הגלישה בתל אביב."
 images:
   - src: /images/uploads/anti-pro-surf-competition-01.jpg
   - src: /images/uploads/anti-pro-surf-competition-02.jpg

@@ -6,10 +6,10 @@ year: "2026"
 location: "Ahangama, Sri Lanka"
 location_he: "אהנגמה, סרי לנקה"
 cover: /images/uploads/coast-67-cover.jpg
-featured: false
+featured: true
 order: 13
 description: "Content with models Adrian and Ninalotee for the hotel's site and social."
-description_he: "צילומי תוכן עם הדוגמנים אדריאן ונינלוטה לאתר ולרשתות של המלון."
+description_he: "צילומי תוכן עם הדוגמנים אדריאן ונינלוטה, לאתר ולרשתות של המלון."
 images:
   - src: /images/uploads/coast-67-01.jpg
   - src: /images/uploads/coast-67-02.jpg

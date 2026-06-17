@@ -6,10 +6,10 @@ year: "2026"
 location: "Ahangama, Sri Lanka"
 location_he: "אהנגמה, סרי לנקה"
 cover: /images/uploads/the-nuga-house-cafe-cover.jpg
-featured: false
+featured: true
 order: 53
 description: "Content for the cafe. Warm tones, carrying the natural, yoga-and-wellness feel of the place."
-description_he: "צילומי תוכן לבית הקפה. גוונים חמים, האווירה הטבעית של יוגה וולנס."
+description_he: "צילומי תוכן לבית הקפה — גוונים חמים, והאווירה הטבעית של יוגה ו-וולנס."
 images:
   - src: /images/uploads/the-nuga-house-cafe-01.jpg
   - src: /images/uploads/the-nuga-house-cafe-02.jpg

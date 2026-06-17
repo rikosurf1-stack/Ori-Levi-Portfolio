@@ -6,10 +6,10 @@ year: "2026"
 location: "Ahangama, Sri Lanka"
 location_he: "אהנגמה, סרי לנקה"
 cover: /images/uploads/shell-leg-collective-bus-stop-cover.jpg
-featured: false
+featured: true
 order: 41
 description: "Content for the new collection from the Shell.leg clothing brand in Sri Lanka. Models: Roy, Arian, Sara, Nill."
-description_he: "צילומי תוכן לקולקציה החדשה של מותג הבגדים שלג בסרי לנקה. דוגמנים: רוי, אריאן, שרה, ניל."
+description_he: "צילומי תוכן לקולקציה החדשה של מותג הבגדים שלג, בסרי לנקה. דוגמנים: רוי, אריאן, שרה, ניל."
 images:
   - src: /images/uploads/shell-leg-collective-bus-stop-01.jpg
   - src: /images/uploads/shell-leg-collective-bus-stop-02.jpg

@@ -6,7 +6,7 @@ year: "2025"
 location: "Ahangama, Sri Lanka"
 location_he: "אהנגמה, סרי לנקה"
 cover: /images/uploads/sara-yoga-cover.jpg
-featured: false
+featured: true
 order: 40
 description: "A yoga class led by Sara."
 description_he: "שיעור יוגה בהנחיית שרה."

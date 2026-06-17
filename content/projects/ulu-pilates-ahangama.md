@@ -6,7 +6,7 @@ year: "2026"
 location: "Ahangama, Sri Lanka"
 location_he: "אהנגמה, סרי לנקה"
 cover: /images/uploads/ulu-pilates-ahangama-cover.jpg
-featured: false
+featured: true
 order: 59
 description: "Content for a pilates studio's site and social. Model: Axel."
 description_he: "צילומי תוכן לאתר ולרשתות של סטודיו פילאטיס. דוגמנית: אקסל."

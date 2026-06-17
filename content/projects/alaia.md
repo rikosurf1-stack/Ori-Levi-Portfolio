@@ -9,7 +9,7 @@ cover: /images/uploads/alaia-cover.jpg
 featured: false
 order: 3
 description: "Food and atmosphere for Alaia, the restaurant at The Hotel."
-description_he: "צילומי אוכל ואווירה למסעדת אלאיה שבמלון The Hotel."
+description_he: "צילומי אוכל ואווירה למסעדת אלאיה, ב-The Hotel."
 images:
   - src: /images/uploads/alaia-01.jpg
   - src: /images/uploads/alaia-02.jpg

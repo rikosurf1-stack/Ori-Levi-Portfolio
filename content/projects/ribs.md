@@ -6,10 +6,10 @@ year: "2026"
 location: "Ahangama, Sri Lanka"
 location_he: "אהנגמה, סרי לנקה"
 cover: /images/uploads/ribs-cover.jpg
-featured: false
+featured: true
 order: 37
 description: "A steak restaurant. Content for a new place, for the site and social."
-description_he: "מסעדת בשרים. צילומי תוכן למסעדה חדשה, לאתר ולרשתות."
+description_he: "מסעדת בשרים — צילומי תוכן למקום חדש, לאתר ולרשתות."
 images:
   - src: /images/uploads/ribs-01.jpg
   - src: /images/uploads/ribs-02.jpg

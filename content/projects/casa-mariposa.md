@@ -9,7 +9,7 @@ cover: /images/uploads/casa-mariposa-cover.jpg
 featured: false
 order: 11
 description: "A new villa in Ahangama. I enjoyed catching its authentic, easy atmosphere."
-description_he: "וילה חדשה באהנגמה. נהניתי לתפוס את האווירה האותנטית והנעימה שלה."
+description_he: "וילה חדשה באהנגמה. נהניתי לתפוס את האופי האותנטי והרגוע שלה."
 images:
   - src: /images/uploads/casa-mariposa-01.jpg
   - src: /images/uploads/casa-mariposa-02.jpg

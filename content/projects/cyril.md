@@ -9,7 +9,7 @@ cover: /images/uploads/cyril-cover.jpg
 featured: false
 order: 14
 description: "Cyril's yoga practice is something special. Each student gets their own sheet with their specific practice, so everyone works on what is right for them."
-description_he: "תרגול היוגה של סיריל מיוחד מאוד. לכל תלמיד יש דף עם התרגול הספציפי שלו, כך שכל אחד עובד על מה שמדויק ומתאים לו."
+description_he: "התרגול של סיריל מיוחד. לכל תלמיד דף עם התרגול האישי שלו — כל אחד עובד בדיוק על מה שמתאים לו."
 images:
   - src: /images/uploads/cyril-01.jpg
   - src: /images/uploads/cyril-02.jpg

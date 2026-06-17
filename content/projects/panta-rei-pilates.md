@@ -6,10 +6,10 @@ year: "2024"
 location: "Ahangama, Sri Lanka"
 location_he: "אהנגמה, סרי לנקה"
 cover: /images/uploads/panta-rei-pilates-cover.jpg
-featured: false
+featured: true
 order: 34
 description: "Pilates, shot as part of the content for Panta Rei, for the resort's site and social."
-description_he: "צילומי פילאטיס כחלק מיצירת התוכן של מלון פנטה ריי, לאתר ולרשתות."
+description_he: "פילאטיס, כחלק מתוכן השיווק של פנטה ריי לאתר ולרשתות."
 images:
   - src: /images/uploads/panta-rei-pilates-01.jpg
   - src: /images/uploads/panta-rei-pilates-02.jpg

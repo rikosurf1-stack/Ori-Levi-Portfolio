@@ -6,10 +6,10 @@ year: "2026"
 location: "Ahangama, Sri Lanka"
 location_he: "אהנגמה, סרי לנקה"
 cover: /images/uploads/bali-drink-cover.jpg
-featured: false
+featured: true
 order: 8
 description: "First shots for Bali, a canned coconut-water brand, with Michelle and Anna."
-description_he: "הצילומים הראשונים למותג המשקאות ״באלי״ — מי קוקוס בפחית, עם מישל ואנה."
+description_he: "הצילומים הראשונים ל-Bali, מותג מי קוקוס בפחית, עם מישל ואנה."
 images:
   - src: /images/uploads/bali-drink-01.jpg
   - src: /images/uploads/bali-drink-02.jpg

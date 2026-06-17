@@ -6,7 +6,7 @@ year: "2026"
 location: "Ahangama, Sri Lanka"
 location_he: "אהנגמה, סרי לנקה"
 cover: /images/uploads/together-villa-restaurant-cover.jpg
-featured: false
+featured: true
 order: 55
 description: "First content for the new restaurant at Together villa. Models: Thomas and Sara."
 description_he: "צילומי התוכן הראשונים למסעדה החדשה בוילה Together. דוגמנים: תומאס ושרה."

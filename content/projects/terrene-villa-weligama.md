@@ -6,7 +6,7 @@ year: "2024"
 location: "Weligama, Sri Lanka"
 location_he: "וליגמה, סרי לנקה"
 cover: /images/uploads/terrene-villa-weligama-cover.jpg
-featured: false
+featured: true
 order: 50
 description: "Content for the villa, for Airbnb and social. Model: Michelle."
 description_he: "צילומי תוכן לוילה, ל-Airbnb ולרשתות. דוגמנית: מישל."

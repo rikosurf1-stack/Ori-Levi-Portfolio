@@ -9,7 +9,7 @@ cover: /images/uploads/naya-villa-cover.jpg
 featured: false
 order: 30
 description: "An Airbnb shoot for a new villa."
-description_he: "צילומי Airbnb לוילה חדשה."
+description_he: "צילומים ל-Airbnb של וילה חדשה."
 images:
   - src: /images/uploads/naya-villa-01.jpg
   - src: /images/uploads/naya-villa-02.jpg

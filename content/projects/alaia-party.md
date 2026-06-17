@@ -9,7 +9,7 @@ cover: /images/uploads/alaia-party-cover.jpg
 featured: false
 order: 4
 description: "The Apres Surf party at Alaia. A surf in the afternoon, then dancing into the night. Always a fun one to be at with a camera."
-description_he: "מסיבת ה־Apres Surf באלאיה. גלישה אחר הצהריים, ואז ריקודים אל תוך הלילה. תמיד כיף להגיע ולצלם."
+description_he: "מסיבת ה-Apres Surf באלאיה — גולשים בצהריים, ואז רוקדים אל תוך הלילה. תמיד כיף לבוא עם מצלמה."
 images:
   - src: /images/uploads/alaia-party-01.jpg
   - src: /images/uploads/alaia-party-02.jpg

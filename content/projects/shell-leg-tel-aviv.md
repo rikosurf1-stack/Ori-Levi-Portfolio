@@ -6,10 +6,10 @@ year: "2025"
 location: "Tel Aviv, Israel"
 location_he: "תל אביב, ישראל"
 cover: /images/uploads/shell-leg-tel-aviv-cover.jpg
-featured: false
+featured: true
 order: 42
 description: "Content for the Shell.leg t-shirt collection. Models: Adi, Gaia."
-description_he: "צילומי תוכן לקולקציית הטי־שירט של מותג הבגדים שלג. דוגמנים: עדי, גאיה."
+description_he: "צילומי תוכן לקולקציית הטי-שירט של שלג. דוגמנים: עדי, גאיה."
 images:
   - src: /images/uploads/shell-leg-tel-aviv-01.jpg
   - src: /images/uploads/shell-leg-tel-aviv-02.jpg

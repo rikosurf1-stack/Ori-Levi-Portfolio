@@ -9,7 +9,7 @@ cover: /images/uploads/lisbon-climbing-cover.jpg
 featured: false
 order: 27
 description: "A day of climbing at this beautiful spot over the sea in Ericeira, with Mateo guiding."
-description_he: "יום טיפוס באתר המהמם הזה מעל הים באריסיירה, בהדרכת מתאו."
+description_he: "יום טיפוס באתר המהמם מעל הים באריסיירה, בהדרכת מתאו."
 images:
   - src: /images/uploads/lisbon-climbing-01.jpg
   - src: /images/uploads/lisbon-climbing-02.jpg

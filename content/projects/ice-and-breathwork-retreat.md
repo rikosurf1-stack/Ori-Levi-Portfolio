@@ -6,10 +6,10 @@ year: "2026"
 location: "Ahangama, Sri Lanka"
 location_he: "אהנגמה, סרי לנקה"
 cover: /images/uploads/ice-and-breathwork-retreat-cover.jpg
-featured: false
+featured: true
 order: 22
 description: "The first retreat shot at Barefoot Yoga's new home. A lot of small, powerful moments."
-description_he: "הריטריט הראשון שצולם בבית החדש של ברפוט יוגה. המון רגעים קטנים ועוצמתיים."
+description_he: "הריטריט הראשון שצולם בבית החדש של ברפוט יוגה. הרבה רגעים קטנים, ועוצמתיים."
 images:
   - src: /images/uploads/ice-and-breathwork-retreat-01.jpg
   - src: /images/uploads/ice-and-breathwork-retreat-02.jpg

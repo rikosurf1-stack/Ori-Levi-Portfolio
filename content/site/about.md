@@ -1,5 +1,5 @@
 ---
-portrait: "https://picsum.photos/seed/ori-portrait/1400/1750"
+portrait: "/images/uploads/about-portrait.jpg"
 headline: "I help brands tell visual stories that feel lived-in, considered and quietly luxurious."
 headline_he: "אני עוזר למותגים לספר סיפור חזותי — אותנטי, מדויק ויוקרתי בשקט."
 body: >

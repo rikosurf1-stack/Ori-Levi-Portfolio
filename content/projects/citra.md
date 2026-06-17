@@ -6,10 +6,10 @@ year: "2026"
 location: "Ahangama, Sri Lanka"
 location_he: "אהנגמה, סרי לנקה"
 cover: /images/uploads/citra-cover.jpg
-featured: false
+featured: true
 order: 12
 description: "Citra, the restaurant we all know and love."
-description_he: "סיטרה, המסעדה שכולנו מכירים ואוהבים."
+description_he: "סיטרה — המסעדה שכולם מכירים ואוהבים."
 images:
   - src: /images/uploads/citra-01.jpg
   - src: /images/uploads/citra-02.jpg

@@ -9,7 +9,7 @@ cover: /images/uploads/tzlil-pilates-retreat-cover.jpg
 featured: false
 order: 58
 description: "A full pilates retreat with the instructor at Terra resort."
-description_he: "צילום ריטריט פילאטיס שלם עם המדריכה בריזורט טרה."
+description_he: "ריטריט פילאטיס שלם עם המדריכה, בריזורט טרה."
 images:
   - src: /images/uploads/tzlil-pilates-retreat-01.jpg
   - src: /images/uploads/tzlil-pilates-retreat-02.jpg

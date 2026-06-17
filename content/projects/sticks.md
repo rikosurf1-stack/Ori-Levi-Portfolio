@@ -6,10 +6,10 @@ year: "2025"
 location: "Ahangama, Sri Lanka"
 location_he: "אהנגמה, סרי לנקה"
 cover: /images/uploads/sticks-cover.jpg
-featured: false
+featured: true
 order: 47
 description: "Content for the restaurant. The sunset over the sea, cocktails, swimwear."
-description_he: "צילומי תוכן למסעדה. שקיעה מעל הים, קוקטיילים, בגדי ים."
+description_he: "צילומי תוכן למסעדה — שקיעה מעל הים, קוקטיילים, בגדי ים."
 images:
   - src: /images/uploads/sticks-01.jpg
   - src: /images/uploads/sticks-02.jpg

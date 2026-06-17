@@ -9,7 +9,7 @@ cover: /images/uploads/air-villa-cover.jpg
 featured: false
 order: 2
 description: "An interior shoot for the villa, with models moving through the space to give it some life."
-description_he: "צילומי עיצוב פנים לוילה, עם דוגמנים שמביאים חיים לחללים."
+description_he: "צילומי עיצוב פנים לוילה, עם דוגמנים שנותנים לחללים חיים."
 images:
   - src: /images/uploads/air-villa-01.jpg
   - src: /images/uploads/air-villa-02.jpg

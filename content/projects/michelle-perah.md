@@ -6,7 +6,7 @@ year: "2026"
 location: "Ahangama, Sri Lanka"
 location_he: "אהנגמה, סרי לנקה"
 cover: /images/uploads/michelle-perah-cover.jpg
-featured: false
+featured: true
 order: 29
 description: "A lifestyle session with Michelle."
 description_he: "צילומי לייפסטייל עם מישל."

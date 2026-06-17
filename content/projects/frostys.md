@@ -6,10 +6,10 @@ year: "2026"
 location: "Ahangama, Sri Lanka"
 location_he: "אהנגמה, סרי לנקה"
 cover: /images/uploads/frostys-cover.jpg
-featured: false
+featured: true
 order: 19
 description: "Frosty's, a wellness space. A social shoot with a playful, happy mood."
-description_he: "פרוסטיס, מתחם וולנס. צילומים לרשתות באווירה משחקית ושמחה."
+description_he: "פרוסטיס, מתחם וולנס — צילומים לרשתות, באווירה קלילה ושמחה."
 images:
   - src: /images/uploads/frostys-01.jpg
   - src: /images/uploads/frostys-02.jpg

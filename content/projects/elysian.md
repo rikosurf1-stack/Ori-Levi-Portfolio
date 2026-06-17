@@ -6,10 +6,10 @@ year: "2026"
 location: "Galle, Sri Lanka"
 location_he: "גאלה, סרי לנקה"
 cover: /images/uploads/elysian-cover.jpg
-featured: false
+featured: true
 order: 16
 description: "Dino's clothing brand. We went to Galle for a more urban feel."
-description_he: "מותג הבגדים של דינו. נסענו לגאלה כדי לקבל אווירה עירונית יותר."
+description_he: "מותג הבגדים של דינו. יצאנו לגאלה כדי לתפוס אווירה עירונית קצת יותר."
 images:
   - src: /images/uploads/elysian-01.jpg
   - src: /images/uploads/elysian-02.jpg

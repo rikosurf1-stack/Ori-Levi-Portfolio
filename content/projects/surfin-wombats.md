@@ -1,12 +1,12 @@
 ---
 title: "Surfing Wombats Mirissa"
 title_he: ""
-category: Lifestyle
+category: Food & Beverage
 year: "2026"
 location: "Mirissa, Sri Lanka"
 location_he: "מיריסה, סרי לנקה"
 cover: /images/uploads/surfin-wombats-cover.jpg
-featured: false
+featured: true
 order: 48
 description: "Content for an Italian restaurant."
 description_he: "צילומי תוכן למסעדה איטלקית."

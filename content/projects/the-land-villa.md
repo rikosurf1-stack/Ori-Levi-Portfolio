@@ -9,7 +9,7 @@ cover: /images/uploads/the-land-villa-cover.jpg
 featured: false
 order: 52
 description: "An Airbnb shoot for a new villa."
-description_he: "צילומי Airbnb לוילה חדשה."
+description_he: "צילומים ל-Airbnb של וילה חדשה."
 images:
   - src: /images/uploads/the-land-villa-01.jpg
   - src: /images/uploads/the-land-villa-02.jpg

@@ -9,7 +9,7 @@ cover: /images/uploads/ferstenfeld-villa-cover.jpg
 featured: false
 order: 17
 description: "An Airbnb shoot for a new villa."
-description_he: "צילומי Airbnb לוילה חדשה."
+description_he: "צילומים ל-Airbnb של וילה חדשה."
 images:
   - src: /images/uploads/ferstenfeld-villa-01.jpg
   - src: /images/uploads/ferstenfeld-villa-02.jpg

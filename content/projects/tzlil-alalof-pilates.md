@@ -6,10 +6,10 @@ year: "2026"
 location: "Terra Resort, Sri Lanka"
 location_he: "טרה ריזורט, סרי לנקה"
 cover: /images/uploads/tzlil-alalof-pilates-cover.jpg
-featured: false
+featured: true
 order: 57
 description: "Social content for a pilates instructor."
-description_he: "צילומי תוכן לרשתות של מדריכת פילאטיס."
+description_he: "צילומי תוכן לרשתות, למדריכת פילאטיס."
 images:
   - src: /images/uploads/tzlil-alalof-pilates-01.jpg
   - src: /images/uploads/tzlil-alalof-pilates-02.jpg

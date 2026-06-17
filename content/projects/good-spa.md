@@ -6,10 +6,10 @@ year: "2025"
 location: "Weligama, Sri Lanka"
 location_he: "וליגמה, סרי לנקה"
 cover: /images/uploads/good-spa-cover.jpg
-featured: false
+featured: true
 order: 21
 description: "A session with Maria for the spa's site and social."
-description_he: "סשן עם מריה לאתר ולרשתות של הספא."
+description_he: "סשן עם מריה, לאתר ולרשתות של הספא."
 images:
   - src: /images/uploads/good-spa-01.jpg
   - src: /images/uploads/good-spa-02.jpg

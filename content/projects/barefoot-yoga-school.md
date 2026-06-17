@@ -9,7 +9,7 @@ cover: /images/uploads/barefoot-yoga-school-cover.jpg
 featured: true
 order: 9
 description: "A collaboration between Nuga House and Barefoot, two places in Sri Lanka I really love. It is one of my favorite projects. The grounded feeling, the smiles, the real moments and the friendships that form over a retreat all come through in something like this."
-description_he: "שיתוף פעולה בין נוגה האוס לברפוט, שני מקומות בסרי לנקה שאני מאוד אוהב. אחד הפרוייקטים האהובים עליי — האווירה המקורקעת, החיוכים, הרגעים האמיתיים והחברויות שנרקמות במהלך הריטריט, הכל בא לידי ביטוי כאן."
+description_he: "שיתוף פעולה בין נוגה האוס לברפוט — שני מקומות בסרי לנקה שקרובים לליבי. מהפרוייקטים האהובים עליי: האווירה המקורקעת, החיוכים, הרגעים האמיתיים והחברויות שנרקמות לאורך ריטריט — הכל צף ועולה באירוע כזה."
 images:
   - src: /images/uploads/barefoot-yoga-school-01.jpg
   - src: /images/uploads/barefoot-yoga-school-02.jpg
