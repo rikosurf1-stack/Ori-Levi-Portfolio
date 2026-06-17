@@ -35,9 +35,6 @@ export default function HomePage({ params }: { params: { locale: string } }) {
       <p className="mb-4 max-w-xl text-center font-serif text-2xl font-light leading-snug text-ink md:text-3xl">
         {tagline}
       </p>
-      <p className="mb-10 label text-muted md:mb-12">
-        Commercial lifestyle &amp; interior photography
-      </p>
 
       {/* Category nav — single row on desktop */}
       <nav className="mb-12 flex max-w-2xl flex-wrap items-center justify-center gap-x-5 gap-y-2 md:mb-16 md:max-w-none md:flex-nowrap md:gap-x-6">
