@@ -1,13 +1,13 @@
 ---
 title: "The Bliss villa"
 title_he: ""
-category: Hospitality
+category: Villas & Hotels
 year: "2026"
 location: "Ahangama, Sri Lanka"
 location_he: "אהנגמה, סרי לנקה"
 cover: /images/uploads/the-bliss-villa-cover.jpg
 featured: true
-order: 51
+order: 2
 description: "An Airbnb shoot for a new villa."
 description_he: "צילומים ל-Airbnb של וילה חדשה."
 images:

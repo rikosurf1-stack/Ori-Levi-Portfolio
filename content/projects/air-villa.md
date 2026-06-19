@@ -1,7 +1,7 @@
 ---
 title: "Air Villa"
 title_he: ""
-category: Hospitality
+category: Villas & Hotels
 year: "2025"
 location: "Ahangama, Sri Lanka"
 location_he: "אהנגמה, סרי לנקה"

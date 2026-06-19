@@ -1,7 +1,7 @@
 ---
 title: "Terrene Villa - Weligama"
 title_he: ""
-category: Hospitality
+category: Villas & Hotels
 year: "2024"
 location: "Weligama, Sri Lanka"
 location_he: "וליגמה, סרי לנקה"

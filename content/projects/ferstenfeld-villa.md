@@ -1,7 +1,7 @@
 ---
 title: "Ferstenfeld Villa"
 title_he: ""
-category: Hospitality
+category: Villas & Hotels
 year: "2025"
 location: "Weligama, Sri Lanka"
 location_he: "וליגמה, סרי לנקה"

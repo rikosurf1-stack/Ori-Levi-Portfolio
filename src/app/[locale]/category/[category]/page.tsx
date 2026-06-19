@@ -8,9 +8,11 @@ import {
   getProjectsByCategoryKey,
 } from "@/lib/projects";
 import {
+  CATEGORY_DESCRIPTIONS,
   categoryBySlug,
   isLocale,
   LOCALES,
+  pick,
   t,
   type Locale,
 } from "@/lib/i18n";
@@ -47,6 +49,7 @@ export default function CategoryPage({
 
   const projects = getProjectsByCategoryKey(cat.key);
   const tr = t(locale);
+  const desc = CATEGORY_DESCRIPTIONS[cat.slug];
 
   return (
     <div className="px-6 pb-24 pt-32 md:px-10 md:pb-40 md:pt-44">
@@ -62,6 +65,15 @@ export default function CategoryPage({
             <h1 className="mt-6 font-serif text-5xl font-extralight leading-[1.05] md:text-8xl">
               {locale === "he" ? cat.he : cat.en}
             </h1>
+            {desc && (
+              <div className="mt-8 max-w-2xl space-y-4 font-sans text-base leading-relaxed text-ink/70 md:mt-10">
+                {pick(locale, desc.en, desc.he)
+                  .split("\n\n")
+                  .map((p, i) => (
+                    <p key={i}>{p}</p>
+                  ))}
+              </div>
+            )}
           </header>
         </MotionReveal>
 

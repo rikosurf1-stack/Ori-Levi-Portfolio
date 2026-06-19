@@ -22,7 +22,7 @@ export function pick(locale: Locale, en: string, he?: string): string {
  * on the home screen.
  */
 export const CATEGORIES = [
-  { slug: "hospitality", key: "Hospitality", en: "Hospitality", he: "מלונות" },
+  { slug: "villas-hotels", key: "Villas & Hotels", en: "Villas & Hotels", he: "וילות ומלונות" },
   { slug: "wellness", key: "Wellness", en: "Wellness", he: "אורח חיים" },
   {
     slug: "food-beverage",
@@ -51,6 +51,13 @@ export function categoryLabel(key: string, locale: Locale): string {
   if (!c) return key;
   return locale === "he" ? c.he : c.en;
 }
+
+export const CATEGORY_DESCRIPTIONS: Record<string, { en: string; he: string }> = {
+  "villas-hotels": {
+    en: "Interior photography is planned work. Before I shoot, I plan and understand — the light at different hours, the corners that carry the most atmosphere, the details worth special attention. That preparation is what makes the difference between images that document a place and ones that make someone want to be there.\n\nI work with hotels, villas and boutique properties that want their visual identity to match the experience they're actually offering.",
+    he: "צילום עיצוב פנים הוא עבודה מתוכננת. לפני שאני מצלם, אני מתכונן ומבין — איך מגיע האור בשעות שונות, מה הן הפינות שנושאות את האווירה הכי חזקה, הפרטים שכדאי לשים לב אליהם במיוחד. זה אחד הדברים שעושה את ההבדל בין תמונות שמתעדות מקום לבין כאלה שגורמות למישהו לרצות להיות שם.\n\nאני עובד עם מלונות, וילות ונכסי בוטיק שרוצים שהזהות הוויזואלית שלהם תתאים לחוויה שהם מציעים בפועל.",
+  },
+};
 
 type Dict = {
   nav: { about: string; contact: string; work: string };
@@ -99,7 +106,7 @@ const DICTIONARIES: Record<Locale, Dict> = {
     },
     contact: {
       eyebrow: "Contact",
-      headline: "Let’s create something worth remembering.",
+      headline: "Let's create something worth remembering.",
       sub: "Available worldwide for hospitality, wellness, food & beverage, fashion and lifestyle commissions.",
       whatsapp: "WhatsApp",
       instagram: "Instagram",

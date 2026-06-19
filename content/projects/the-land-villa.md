@@ -1,7 +1,7 @@
 ---
 title: "The Land Villa"
 title_he: ""
-category: Hospitality
+category: Villas & Hotels
 year: "2026"
 location: "Weligama, Sri Lanka"
 location_he: "וליגמה, סרי לנקה"

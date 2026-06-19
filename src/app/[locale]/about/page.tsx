@@ -72,8 +72,13 @@ export default function AboutPage({
                 <p className="label text-muted">{tr.about.workingAcross}</p>
                 <ul className="mt-5 flex flex-wrap gap-x-6 gap-y-3">
                   {disciplines.map((d) => (
-                    <li key={d.slug} className="font-serif text-lg font-light">
-                      {locale === "he" ? d.he : d.en}
+                    <li key={d.slug}>
+                      <Link
+                        href={`/${locale}/category/${d.slug}`}
+                        className="link-underline font-serif text-lg font-light"
+                      >
+                        {locale === "he" ? d.he : d.en}
+                      </Link>
                     </li>
                   ))}
                 </ul>
