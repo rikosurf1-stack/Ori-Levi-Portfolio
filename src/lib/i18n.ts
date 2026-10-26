@@ -60,7 +60,7 @@ export const CATEGORY_DESCRIPTIONS: Record<string, { en: string; he: string }> =
 };
 
 type Dict = {
-  nav: { about: string; contact: string; work: string };
+  nav: { about: string; contact: string; work: string; videos: string };
   home: { eyebrow: string };
   category: { back: string; empty: string; index: string };
   project: {
@@ -85,7 +85,7 @@ type Dict = {
 
 const DICTIONARIES: Record<Locale, Dict> = {
   en: {
-    nav: { about: "About", contact: "Contact", work: "Work" },
+    nav: { about: "About", contact: "Contact", work: "Work", videos: "Videos" },
     home: { eyebrow: "Explore by field" },
     category: {
       back: "All work",
@@ -120,7 +120,7 @@ const DICTIONARIES: Record<Locale, Dict> = {
     language: { label: "עברית" },
   },
   he: {
-    nav: { about: "אודות", contact: "יצירת קשר", work: "עבודות" },
+    nav: { about: "אודות", contact: "יצירת קשר", work: "עבודות", videos: "סרטונים" },
     home: { eyebrow: "עיון לפי תחום" },
     category: {
       back: "כל העבודות",

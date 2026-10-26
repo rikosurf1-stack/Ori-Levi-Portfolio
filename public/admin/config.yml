@@ -36,7 +36,7 @@ collections:
         name: "category"
         widget: "select"
         options:
-          - "Hospitality"
+          - "Villas & Hotels"
           - "Wellness"
           - "Food & Beverage"
           - "Fashion"
@@ -104,6 +104,60 @@ collections:
               required: false,
               hint: "Brief description of the photo (for accessibility).",
             }
+
+  - name: "videos"
+    label: "Videos"
+    label_singular: "Video"
+    description: "Add or edit a video. Paste the Vimeo video ID (the number in the URL)."
+    folder: "content/videos"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    format: "yaml-frontmatter"
+    summary: "{{title}}"
+    sortable_fields: ["order", "title"]
+    fields:
+      - { label: "Title (English)", name: "title", widget: "string" }
+      - {
+          label: "Title (Hebrew)",
+          name: "title_he",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Vimeo ID",
+          name: "vimeo_id",
+          widget: "string",
+          hint: "The number in the Vimeo URL. e.g. for vimeo.com/1239308942 enter 1239308942",
+        }
+      - {
+          label: "Orientation",
+          name: "orientation",
+          widget: "select",
+          options: ["vertical", "horizontal"],
+          default: "vertical",
+          hint: "Vertical = phone/story format. Horizontal = widescreen (takes two columns).",
+        }
+      - {
+          label: "Description (English)",
+          name: "description",
+          widget: "text",
+          required: false,
+        }
+      - {
+          label: "Description (Hebrew)",
+          name: "description_he",
+          widget: "text",
+          required: false,
+        }
+      - {
+          label: "Order",
+          name: "order",
+          widget: "number",
+          value_type: "int",
+          required: false,
+          hint: "Lower numbers appear first (1, 2, 3 …).",
+        }
 
   - name: "pages"
     label: "Pages"

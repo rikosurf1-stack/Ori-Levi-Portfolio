@@ -41,3 +41,14 @@ export type ContactContent = {
   instagram: string;
   background: string;
 };
+
+export type VideoItem = {
+  slug: string;
+  title: string;
+  titleHe?: string;
+  vimeoId: string;
+  orientation: "vertical" | "horizontal";
+  description?: string;
+  descriptionHe?: string;
+  order: number;
+};
