@@ -7,6 +7,7 @@ import {
   categoryLabel,
   isLocale,
   pick,
+  t,
   type Locale,
 } from "@/lib/i18n";
 
@@ -47,6 +48,12 @@ export default function HomePage({ params }: { params: { locale: string } }) {
             {locale === "he" ? c.he : c.en}
           </Link>
         ))}
+        <Link
+          href={`/${locale}/videos`}
+          className="link-underline label text-muted transition-colors hover:text-ink"
+        >
+          {t(locale).nav.videos}
+        </Link>
       </nav>
 
       <HomeCarousel slides={slides} />

@@ -29,7 +29,7 @@ export default function VideosPage({
     <div className="px-6 pb-24 pt-32 md:px-10 md:pb-40 md:pt-44">
       <div className="mx-auto max-w-page">
         <MotionReveal>
-          <header className="mb-16 md:mb-28">
+          <header className="mb-16 text-center md:mb-28">
             <h1 className="mt-6 font-serif text-5xl font-extralight leading-[1.05] md:text-8xl">
               {locale === "he" ? "סרטונים" : "Videos"}
             </h1>
@@ -37,12 +37,13 @@ export default function VideosPage({
         </MotionReveal>
 
         {videos.length > 0 ? (
-          <div className="grid grid-cols-2 gap-x-4 gap-y-10 md:grid-cols-3 md:gap-x-10 md:gap-y-16">
-            {videos.map((video, i) => (
+          <div className="flex flex-col items-center gap-20 md:gap-28">
+            {videos.map((video) => (
               <MotionReveal
                 key={video.slug}
-                delay={i * 0.05}
-                className={video.orientation === "horizontal" ? "col-span-2" : ""}
+                className={`w-full ${
+                  video.orientation === "horizontal" ? "max-w-4xl" : "max-w-sm md:max-w-md"
+                }`}
               >
                 <div className="group">
                   <div

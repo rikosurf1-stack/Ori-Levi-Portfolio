@@ -34,7 +34,6 @@ export default function Header({ locale }: { locale: Locale }) {
   })();
 
   const nav = [
-    { href: `/${locale}/videos`, label: tr.nav.videos },
     { href: `/${locale}/about`, label: tr.nav.about },
     { href: `/${locale}/contact`, label: tr.nav.contact },
   ];
